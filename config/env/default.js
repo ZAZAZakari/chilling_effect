@@ -66,5 +66,6 @@ module.exports = {
   bodyParser: {
     json: {limit: '100kb'},
     urlencoded: {limit: '100kb', extended: true}
-  }
+  },
+  favicon: 'packages/custom/chilling_effect/public/assets/img/chilling_effect_icon.png'
 }

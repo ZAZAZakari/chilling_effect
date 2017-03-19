@@ -1,3 +1,38 @@
+<div class='header-bar' ng-controller="HeaderController as hdrctr">
+  <div class='header-bar-container'>
+    <img src='images/chilling_effect_icon_brand-01.png' style='display:inline-block; height:100%; margin-right:60px;';/>
+    <div class='header-bar-stack header-bar-stack-left'>
+      <div class='header-bar-button'>Features</div>
+      <div class='header-bar-button'>Pricing</div>
+      <div class='header-bar-button'>Why us</div>
+      <div class='header-bar-button'>Help</div>
+      <div class='header-bar-button'>Support</div>
+    </div>
+    <div class='header-bar-stack header-bar-right-stack'>
+      <div class='header-bar-button' aria-label="Login" ui-sref="auth.login" ng-if="!hdrctr.hdrvars.authenticated">Sign in</div>
+      <div class='header-bar-button' aria-label="Sign Up" ui-sref="auth.register" ng-if="!hdrctr.hdrvars.authenticated">Register</div>
+      <md-menu ng-if="hdrctr.hdrvars.authenticated" md-position-mode="target-right target">
+        <md-button aria-label="Account" class="md-button top-link" ng-click="$mdOpenMenu()">
+          <md-tooltip md-direction="left">Account Settings</md-tooltip>
+          <md-icon>account_box</md-icon>
+          <span id="toolbar-username">{{hdrctr.hdrvars.user.name}}</span>
+          <md-icon md-menu-origin>keyboard_arrow_down</md-icon>
+        </md-button>
+
+        <md-menu-content width="3">
+          <md-menu-item>
+            <md-button class="md-button" aria-label="Logout" ng-click="hdrctr.logout()">
+              <md-icon>exit_to_app</md-icon>Logout
+            </md-button>
+          </md-menu-item>
+        </md-menu-content>
+      </md-menu>
+    </div>
+  </div>
+</div>
+
+
+<!--
 <div class="md-toolbar-tools" ng-controller="HeaderController as hdrctr">
   <div ng-controller="AdminController as vm" ng-if="hdrctr.hdrvars.isAdmin">
     <md-icon class="material-icons ng-binding" ng-click="vm.toggleMenu()">menu</md-icon>
@@ -8,28 +43,8 @@
     {{item.title}}
   </md-button>
   <span flex></span>
-  <md-button class="md-button" aria-label="Sign Up" ui-sref="auth.register" ng-if="!hdrctr.hdrvars.authenticated">
-    Join
-  </md-button>
-  <md-button class="md-button" aria-label="Login" ui-sref="auth.login" ng-if="!hdrctr.hdrvars.authenticated">
-    Login
-  </md-button>
+  
 
-  <md-menu ng-if="hdrctr.hdrvars.authenticated" md-position-mode="target-right target">
-    <md-button aria-label="Account" class="md-button top-link" ng-click="$mdOpenMenu()">
-      <md-tooltip md-direction="left">Account Settings</md-tooltip>
-      <md-icon>account_box</md-icon>
-      <span id="toolbar-username">{{hdrctr.hdrvars.user.name}}</span>
-      <md-icon md-menu-origin>keyboard_arrow_down</md-icon>
-    </md-button>
-
-    <md-menu-content width="3">
-      <md-menu-item>
-        <md-button class="md-button" aria-label="Logout" ng-click="hdrctr.logout()">
-          <md-icon>exit_to_app</md-icon>
-          Logout
-        </md-button>
-      </md-menu-item>
-    </md-menu-content>
-  </md-menu>
+  
 </div>
+-->

@@ -1,0 +1,17 @@
+/* =========================================== 
+   Target Audience panel 
+   ===========================================*/
+.target-audience-container{
+	background-color: #ddd;
+	display: inline-block;
+	height: 120px; 
+	margin: 10px;
+	padding: 20px;
+	text-align: left;
+	vertical-align: top;
+	width: 400px;
+}
+.target-audience-title{
+	font-weight: bold;
+	margin-top: 10px;
+}

@@ -1,2 +1,107 @@
-<div class='header section'></div>
-<div class='cover-title'>VPN Service for Everybody</div>
+<div style='width:100%; margin-top:90px;' ng-controller="IndexController">
+  <div class='header section'></div>
+  <div class='cover-title'>VPN Service for Everybody</div><br/>
+  <!-- ===================================================
+       Product Section
+       =================================================== --> 
+  <div class='bodySection-white section'>
+    <div class='container'>
+      <div class='section-title-container'>
+        <div class='section-title'> Pricing </div>
+        <div class='section-subtitle'> Subtitle of the section. Give a closer look.</div>
+      </div>
+      <div class='product-container' style='opacity:0.5'>
+        <div class='product-title'>Travellers</div>
+        <div class='product-saving'>Save 30%</div>
+        <div class='product-marked-price'>&nbsp;&nbsp;&nbsp;$8.50&nbsp;&nbsp;&nbsp;</div>
+        <div class='product-price'>$2.12</div>
+        <div class='product-button'>Try Now</div>
+      </div>
+      <div class='product-container'>
+        
+      </div>
+      <div class='product-container'>     
+      </div>
+    </div>
+  </div>
+  <!-- 
+  ======================================================= 
+  Feature Section  
+  =======================================================
+  --> 
+  <div class='bodySection-aluminium section'>
+    <div class='container'>
+      <div class='section-title-container'>
+        <div class='section-title'> Features </div>
+        <div class='section-subtitle'> </div>
+      </div>
+      <div ng-repeat="eachFeature in features" class='feature-container'>
+        <span class="fa-stack fa-lg" style='font-size:40px'>
+            <i class="fa fa-circle-thin fa-stack-2x"></i>
+            <i class="fa fa-stack-1x" ng-class="eachFeature.icon"></i>
+        </span>
+        <div class='feature-title'>{{eachFeature.title}}</div>
+        <div class='feature-description'>{{eachFeature.description}}</div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  ======================================================= 
+  Target Audience Section  
+  =======================================================
+  --> 
+  <div class='bodySection-white section'>
+    <div class='container'>
+      <div class='section-title-container'>
+        <div class='section-title'>Chilling Effect VPN is good for... </div>
+        <div class='section-subtitle'> </div>
+      </div>  
+      <div ng-repeat='eachTargetAudience in targetAudiences' class='target-audience-container'>
+        <div class='row'>
+          <div class='col-md-3'>
+            <div class='target-audience-icon'>
+              <span class="fa-stack fa-lg" style='font-size:40px'>
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-stack-1x" ng-class="eachTargetAudience.icon"></i>
+              </span> 
+            </div>
+          </div>
+          <div class='col-md-9'>
+            <div class='target-audience-title'>{{eachTargetAudience.title}}</div>
+            <div class='target-audience-description'>{{eachTargetAudience.description}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  ======================================================= 
+  Footer
+  =======================================================
+  -->     
+  <div class='footer section'>
+    <div class='row'>
+    <div class='col-md-4'>
+      <img src='chilling_effect_icon_brand-01.png' width='250px' />
+          <br/>
+      <span class="fa-stack fa-lg" ng-repeat="eachFooterIcon in footerIcons">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+          <i class="fa fa-stack-1x" ng-class="eachFooterIcon"></i>
+      </span>
+    </div>
+    <div class='col-md-4'>
+      <h2>Title</h2>
+      <ul>
+        <li>page1</li>
+        <li>page2</li>
+        <li>page3</li>
+        <li>page4</li>
+      </ul>
+    </div>
+    <div class='col-md-4'>
+      What the fu
+    </div>
+    </div><br/>
+    <div style='text-align:center;'>Copyright &copy; 2017 Chilling Effect. All Rights Reserved.</div>
+  </div>
+</div>

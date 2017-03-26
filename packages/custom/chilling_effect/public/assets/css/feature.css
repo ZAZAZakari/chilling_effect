@@ -1,0 +1,24 @@
+/* =========================================== 
+   Features panel 
+   ===========================================*/
+.feature-container{
+	background-color: #ccc;
+	display: inline-block;
+	height: 280px;
+	margin: 10px;
+	padding: 20px;
+	vertical-align: top;
+	width: 230px;
+}
+.feature-title{
+	font-weight: bold;
+	margin-top:10px;
+}
+.feature-description{
+	font-weight: normal;
+	margin-top: 10px;
+}
+.feature-icon{
+	color: var(--blush);
+	font-size: 40px;
+}
